@@ -47,10 +47,10 @@ export class List {
   }
 
   removeTask(index) {
-    this.tasks.splice(index - 1, 1);
-    this.tasks.forEach((task) => {
-      task.setIndex(this.tasks.indexOf(task) + 1);
-    });
+    this.tasks.splice(index - 1, 1)
+      .forEach((task) => {
+        task.setIndex(this.tasks.indexOf(task) + 1);
+      });
 
     this.render().saveToLocal();
   }
